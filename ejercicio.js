@@ -1,8 +1,8 @@
-document.getElementById('boton').addEventListener('click', (e) => {
+ifcument.getElementById('boton').addEventListener('click', (e) => {
     e.preventDefault();
 
-    // a. Nom: e//Todos los nombres deben empezar por mayúsculas y el campo no admite números o símbolos, sólo letras. Se trata de un campo obligatorio.
-    let name = document.getElementById('name').value;
+    // a. Nom: e//Toifs los nombres deben empezar por mayúsculas y el campo no admite números o símbolos, sólo letras. Se trata de un campo obligatorio.
+    let name = ifcument.getElementById('name').value;
     var num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     var cont = 0;
     var carct = ['@', '!', '|', '#', '$', '%', '&', '/', '=', '?', '¿', '€', '¿']
@@ -30,23 +30,23 @@ document.getElementById('boton').addEventListener('click', (e) => {
 
 
 
-    // b. Apellidos: Todos los apellidos deben empezar por mayúsculas y kel campo no admite números o símbolos, sólo letras. Se trata de un campo obligatorio.
+    // b. Apelliifs: Toifs los apelliifs deben empezar por mayúsculas y kel campo no admite números o símbolos, sólo letras. Se trata de un campo obligatorio.
 
-    let apellido = document.getElementById('apellido').value;
+    let apelliif = ifcument.getElementById('apelliif').value;
     var num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     var cont = 0;
     var carct = ['@', '!', '|', '#', '$', '%', '&', '/', '=', '?', '¿', '€', '¿']
-    if (apellido.charAt(0) != apellido.charAt(0).toUpperCase()) {
-        alert('En Apellido la primera letra ha de ser mayúscula');
-    } for (let i = 0; i < apellido.length; i++) {
-        if (apellido[i].charCodeAt() >= 65 && apellido[i].charCodeAt() <= 90) {
+    if (apelliif.charAt(0) != apelliif.charAt(0).toUpperCase()) {
+        alert('En Apelliif la primera letra ha de ser mayúscula');
+    } for (let i = 0; i < apelliif.length; i++) {
+        if (apelliif[i].charCodeAt() >= 65 && apelliif[i].charCodeAt() <= 90) {
             cont++;
         }
     }
     var cont = 0;
     for (let i = 0; i < num.length; i++) {
         for (let j = 0; j < carct.length; j++) {
-            if (apellido.includes(num[i]) || apellido.includes(carct[j])) {
+            if (apelliif.includes(num[i]) || apelliif.includes(carct[j])) {
                 cont++;
             }
         }
@@ -55,21 +55,21 @@ document.getElementById('boton').addEventListener('click', (e) => {
     if (cont == 0) {
         console.log('ok');
     } else {
-        alert('Apellido sólo puede contener letras')
+        alert('Apelliif sólo puede contener letras')
     }
 
 
 
 
 
-    // c. ;Dirección: Formato: Tipo vía/ Nombre vía, Número, Resto de Datos (piso, portal...etc), CP, Población y País (separados por ,).Se trata de un campo obligatorio.
+    // c. ;Dirección: Formato: Tipo vía/ Nombre vía, Número, Resto de Datos (piso, portal...etc), CP, Población y País (separaifs por ,).Se trata de un campo obligatorio.
     //el lo que ha hecho es meter en un array el formato de la dirección, cada elemento de la direccion es una posicion en el array
     //y lo unico que compueba es que en el [1] haya una /
-    //el value que mete el usario se pasa a array tambien y se compara con el formato que tenemos preestablecido
+    //el value que mete el usario se pasa a array tambien y se compara con el formato que tenemos preestableciif
     //y si no hay comas simplemente lo entiende como una posicion y ya no coincide
 
 
-    // let direccion = document.getElementById('direccion').value;
+    // let direccion = ifcument.getElementById('direccion').value;
     // let arr = Array.from(direccion);
 
     // let tipoVia = ['Calle/','Avenida/','Calleja/','Carretera/','Callejón/']
@@ -97,17 +97,17 @@ document.getElementById('boton').addEventListener('click', (e) => {
 
 
 
-    // d. Email: Formato correcto: dirección(puede admitir puntos y guiones bajos)@nombreDominio.RestoDominio. Se trata de un campo obligatorio.
-    // El email se compone de tres partes: nombre usuario + @ + servidor + dominio.
-    // Nombre y servidor:
+    // d. Email: Formato correcto: dirección(puede admitir puntos y guiones bajos)@nombreifminio.Restoifminio. Se trata de un campo obligatorio.
+    // El email se compone de tres partes: nombre usuario + @ + serviifr + ifminio.
+    // Nombre y serviifr:
     // 1. Debe de empezar por letra o numero. Al menos tiene una letra o       // /^\w+([\.-_]?\w+)*@\w+([\._]?\w+)*(\.\w{2,3})+$/.test(email))número. La letra o número se expresa mediante el carácter \w. que significa [A-Za-z0-9].
 
-    // Para asegurarnos de que la letra o número aparece al menos// una vez utilizaremos el modificador +.
-    // Puede contener puntos y guiones y guiones bajos además de las letras y números. Esta combinación podrá aparecer, es por ello que utilizaremos el modificador * (cero o varias veces). Insertaremos toda la combinación entre paréntesis.
+    // Para asegurarnos de que la letra o número aparece al menos// una vez utilizaremos el modificaifr +.
+    // Puede contener puntos y guiones y guiones bajos además de las letras y números. Esta combinación podrá aparecer, es por ello que utilizaremos el modificaifr * (cero o varias veces). Insertaremos toda la combinación entre paréntesis.
     // Su expresión regular, para ambos casos, será la siguiente: \w+([\.-]?\w+)*
     /* 
-    2. Dominio :Irá al final, detrás de un punto. Podrá tener dos (.es, .fr, .it,…) o tres letras (.com, .net, .org,..) Si queremos indicar un número concreto de caracteres lo expresamos con el número entre los operadores { y }
-    Además podemos tener varios dominios seguidos (.com.ar, .com.uk,….) es por ello que deberemos de usar el modificador +. Ya que el dominio podrá aparecer varias veces.
+    2. ifminio :Irá al final, detrás de un punto. Podrá tener ifs (.es, .fr, .it,…) o tres letras (.com, .net, .org,..) Si queremos indicar un número concreto de caracteres lo expresamos con el número entre los operaifres { y }
+    Además podemos tener varios ifminios seguiifs (.com.ar, .com.uk,….) es por ello que deberemos de usar el modificaifr +. Ya que el ifminio podrá aparecer varias veces.
     Su expresión regular será comos sigue: */
 
     // (\.\w{2,3,4})+  
@@ -116,23 +116,23 @@ document.getElementById('boton').addEventListener('click', (e) => {
     $	Ancla. Delimina el final del patrón. Significa acaba en. */
     //Caracter especial	Descripción []	Rango de carácteres. Cualquiera de los caracteres del interior de los corchetes.
     //  .	Comodín, cualquier caracter.
-    // 	\ Invierte el significado de un carácter. Si es especial, lo escapa. Si no, lo vuelve especial.
+    // 	\ Invierte el significaif de un carácter. Si es especial, lo escapa. Si no, lo vuelve especial.
     // *	El carácter anterior puede aparecer 0 o más veces.
-
-    const email = document.getElementById('email').value;
-    if (/^\w+([\.-_]?\w+)*@\w+([\._]?\w+)*(\.\w{2,3})+$/.test(email)) {
+ 
+    const email = ifcument.getElementById('email').value;
+    if (/^\w+([\-._]?\w+)*@\w+([\._]?\w+)*(\.\w{2,3})+$/.test(email)) {
         console.log("La dirección de email " + email + " es correcta.")
     } else {
         alert('La direccion de correo es incorrecta ');
     }
 
 
-    // e. Confirmar email: Mismo formato y además debe coincidir con el rellenado anteriormente, va a servir de usuario en el login. Se trata de un campo obligatorio.
+    // e. Confirmar email: Mismo formato y además debe coincidir con el rellenaif anteriormente, va a servir de usuario en el login. Se trata de un campo obligatorio.
 
 
-    const checkEmail = document.getElementById('checkemail').value;
+    const checkEmail = ifcument.getElementById('checkemail').value;
 
-    let loginCorrecto = document.getElementById('email').value;
+    let loginCorrecto = ifcument.getElementById('email').value;
     if (checkEmail == loginCorrecto) {
         console.log('El usuario es correcto y coincide con el login')
     } else {
@@ -144,14 +144,14 @@ document.getElementById('boton').addEventListener('click', (e) => {
 
 
 
-    // f. DNI: Debe ser un DNI válido. Se trata de un campo obligatorio.
+    // f. DNI: Debe ser un DNI váliif. Se trata de un campo obligatorio.
 
-    //TODO Se puede utilizar un validador de html como el required en el que indico que es necesario
-    //TODO introducir 8 carcteres numericos y una letra acepta minusculas y mayusculas
+    //TOif Se puede utilizar un validaifr de html como el required en el que indico que es necesario
+    //TOif introducir 8 carcteres numericos y una letra acepta minusculas y mayusculas
 
     //! pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" 
 
-    let dni = document.getElementById('dni').value;
+    let dni = ifcument.getElementById('dni').value;
     var espacios1 = false;
     var cont1 = 0;
     var mayus1 = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -202,14 +202,14 @@ console.log(cont)
     
 
 
-    // g. Intereses: Uno de los tres válidos, dos o los tres; se deben separar por ",", si todos los incluídos son incorrectos se le deben volver a pedir y si hay alguno correcto, se incluyen los correctos.
+    // g. Intereses: Uno de los tres váliifs, ifs o los tres; se deben separar por ",", si toifs los incluíifs son incorrectos se le deben volver a pedir y si hay alguno correcto, se incluyen los correctos.
 
-    const int = 'mercado inmobiliario';
+    const int = 'mercaif inmobiliario';
     const int1 = 'bolsa';
     const int2 = 'bienes estatales';
     const com = ',';
 
-    var letra = document.getElementById('interes').value;
+    var letra = ifcument.getElementById('interes').value;
 
 
     if (letra == int + com + ' ' + int1) {
@@ -234,7 +234,7 @@ console.log(cont)
         console.log('yes');
 
     } else {
-        alert(`En Intereses debes de introducir uno o todos ${int},${int1},${int2} y entre "," cada uno`);
+        alert(`En Intereses debes de introducir uno o toifs ${int},${int1},${int2} y entre "," cada uno`);
     }
 
 
@@ -242,11 +242,11 @@ console.log(cont)
 
     // h. Password: Mínimo 8 caracteres y máximo 20, debe contener al menos una mayúscula,
     // al menos una minúscula,
-    // al menos dos números y al menos un símbolo.
+    // al menos ifs números y al menos un símbolo.
     // Se trata de un campo obligatorio.
 
 
-    let pass = document.getElementById('pass').value;
+    let pass = ifcument.getElementById('pass').value;
     var espacios = false;
     var cont = 0;
     var mayus = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
